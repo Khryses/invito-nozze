@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paola & Edoardo - Invito di Nozze</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --azzurro: #a7d3f3;
+      --verde: #b4d9c1;
+      --bianco: #ffffff;
+      --blu-polvere: #659ebc;
+      --testo: #2d2d2d;
+      --accent: #9fc5d3;
+      --link: #3c5b96;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, var(--bianco), var(--verde));
+      color: var(--testo);
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1508610048659-a06c173f08ec?fit=crop&w=1400&q=80') no-repeat center center;
+      background-size: cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    header h1 {
+      position: relative;
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.5em;
+      z-index: 1;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .countdown, .gift-section {
+      text-align: center;
+      background-color: var(--bianco);
+      border: 3px dashed var(--accent);
+      padding: 2rem;
+      border-radius: 20px;
+      margin-top: 2rem;
+    }
+    .countdown h2, .gift-section h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.8em;
+      color: var(--blu-polvere);
+    }
+    .countdown p, .gift-section p {
+      max-width: 700px;
+      margin: 1rem auto;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .timer div {
+      border: 2px solid var(--azzurro);
+      border-radius: 10px;
+      padding: 1rem;
+      font-size: 1.5rem;
+      color: var(--blu-polvere);
+      width: 100px;
+    }
+    .event-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 3rem;
+      gap: 2rem;
+    }
+    .event-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      flex: 1 1 300px;
+    }
+    .event-details {
+      flex: 1 1 300px;
+    }
+    .event-details h4 {
+      font-size: 1.2em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .event-details h3 {
+      font-family: 'Great Vibes', cursive;
+      color: var(--blu-polvere);
+      font-size: 2.6em;
+      margin: 0.2rem 0 1rem 0;
+    }
+    .event-details p, .event-details a {
+      font-size: 1.1em;
+      color: var(--testo);
+      text-decoration: none;
+    }
+    .event-details a {
+      color: var(--link);
+      font-weight: 500;
+    }
+    .event-details a:hover {
+      text-decoration: underline;
+    }
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-top: 3rem;
+    }
+    form h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.4em;
+      text-align: center;
+    }
+    form p {
+      text-align: center;
+      font-style: italic;
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    form button {
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      background-color: var(--azzurro);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer {
+      text-align: center;
+      font-size: 1em;
+      font-style: italic;
+      color: #555;
+      padding: 2rem;
+      font-family: 'Great Vibes', cursive;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paola & Edoardo</h1>
+  </header>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+  </audio>
+
+  <section class="countdown">
+    <h2>Ci sposiamo il 27 Settembre 2025</h2>
+    <p>Vi aspettiamo numerosi al nostro fianco per sostenerci con il vostro affetto nel giorno più importante della nostra vita.</p>
+    <div class="timer">
+      <div><span id="days">--</span><br>giorni</div>
+      <div><span id="hours">--</span><br>ore</div>
+      <div><span id="minutes">--</span><br>minuti</div>
+    </div>
+  </section>
+
+  <section class="event-section">
+    <img src="https://via.placeholder.com/400x250.png?text=Cerimonia" alt="Cerimonia">
+    <div class="event-details">
+      <h4>La Cerimonia</h4>
+      <h3>Castello di Montecopiolo</h3>
+      <p><strong>Orario:</strong> 11:00</p>
+      <p><strong>Indirizzo:</strong> Via Castello, 75, 47868 Villagrande RN</p>
+      <p><a href="https://www.google.com/maps?q=Via+Castello,+75,+47868+Villagrande+RN" target="_blank">Vedi su Google Maps</a></p>
+    </div>
+  </section>
+
+  <section class="event-section">
+    <img src="https://via.placeholder.com/400x250.png?text=Ricevimento" alt="Ricevimento">
+    <div class="event-details">
+      <h4>Il Ricevimento</h4>
+      <h3>Villa San Marco Restaurant</h3>
+      <p><strong>Orario:</strong> 12:30</p>
+      <p><strong>Indirizzo:</strong> Via delle Pratole, 2/b, 47868 Villagrande RN</p>
+      <p><a href="https://www.google.com/maps?q=Via+delle+Pratole,+2b,+47868+Villagrande+RN" target="_blank">Vedi su Google Maps</a></p>
+    </div>
+  </section>
+
+  <section class="gift-section">
+    <h2>Un piccolo pensiero</h2>
+    <p>Conto Corrente: 1000/00001963<br>
+    Banca: INTESA SAN PAOLO - Filiale 66974<br>
+    Corso Garibaldi Num. 21 / 48022 LUGO (RA)<br><br>
+    Intestato a: ALDO BURZATTA<br>
+    IBAN: IT29 I030 6923 8221 0000 0001 963<br>
+    BIC: BCITITMM</p>
+  </section>
+
+  <section>
+    <form action="https://formspree.io/f/mqkryygr" method="POST">
+      <h2>Conferma Presenza</h2>
+      <p>Compila il modulo per confermare la tua partecipazione.</p>
+      <label for="name">Nome e cognome*</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required />
+      <label for="attendance">Parteciperai?</label>
+      <select id="attendance" name="attendance" required>
+        <option value="">Seleziona...</option>
+        <option value="Sì">Sì</option>
+        <option value="No">No</option>
+      </select>
+      <label for="guests">Numero di accompagnatori</label>
+      <input type="number" id="guests" name="guests" min="0" value="0" />
+      <label for="note">Note (allergie, preferenze alimentari...)</label>
+      <textarea id="note" name="note"></textarea>
+      <button type="submit">Invia conferma</button>
+    </form>
+  </section>
+
+  <div class="footer">
+    Con amore, Paola & Edoardo
+  </div>
+
+  <script>
+    const weddingDate = new Date("2025-09-27T11:00:00").getTime();
+    const timer = () => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+      document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    };
+    setInterval(timer, 60000);
+    timer();
+  </script>
+</body>
+</html>
