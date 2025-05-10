@@ -18,11 +18,19 @@
     * {
       box-sizing: border-box;
     }
+    body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('6562423.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.2; /* Regola l’opacità */
+  z-index: -1;
+}
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to bottom, var(--bianco), var(--verde));
-      color: var(--testo);
     }
     header {
       background: url('https://archeologiamedievale.uniurb.it/images/tour_copiolo/10_Abitazione%20del%20Leone.jpg') no-repeat center center;
