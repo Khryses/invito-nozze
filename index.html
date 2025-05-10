@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -14,6 +13,7 @@
       --blu-polvere: #659ebc;
       --testo: #2d2d2d;
       --accent: #9fc5d3;
+      --link: #2a5d9f;
     }
     * {
       box-sizing: border-box;
@@ -24,17 +24,17 @@
       background: linear-gradient(to bottom, var(--bianco), var(--verde));
       color: var(--testo);
     }
-   header {
-  background: url('https://archeologiamedievale.uniurb.it/images/tour_copiolo/10_Abitazione%20del%20Leone.jpg') no-repeat center center;
-  background-size: cover;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  position: relative;
-}
+    header {
+      background: url('https://archeologiamedievale.uniurb.it/images/tour_copiolo/10_Abitazione%20del%20Leone.jpg') no-repeat center center;
+      background-size: cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
     header::after {
       content: '';
       position: absolute;
@@ -64,6 +64,15 @@
       font-family: 'Great Vibes', cursive;
       font-size: 2.8em;
       color: var(--blu-polvere);
+      margin-bottom: 1rem;
+    }
+    .countdown .center-image {
+      margin: 1.5rem 0;
+    }
+    .countdown .center-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
     }
     .countdown p {
       max-width: 700px;
@@ -84,6 +93,10 @@
       font-size: 1.5rem;
       color: var(--blu-polvere);
       width: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     .event-section {
       display: flex;
@@ -116,10 +129,11 @@
     .event-details p, .event-details a {
       font-size: 1.1em;
       color: var(--testo);
-      text-decoration: none;
     }
-    .event-details a:hover {
+    .event-details a {
+      color: var(--link);
       text-decoration: underline;
+      font-weight: bold;
     }
     form {
       background: white;
