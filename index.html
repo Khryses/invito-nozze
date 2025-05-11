@@ -229,7 +229,19 @@
   <header>
     <h1>Paola & Edoardo</h1>
   </header>
+  
+<audio id="background-music" loop>
+  <source src="https://od.lk/s/NTVfMzUzNDMzNThf/romantic-wedding-background-music-337990.mp3" type="audio/mpeg">
+</audio>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const audio = document.getElementById("background-music");
+    document.body.addEventListener("click", () => {
+      audio.play().catch(() => {});
+    }, { once: true });
+  });
+</script>
   <section class="countdown">
     <h2>Ci sposiamo il<br>27 Settembre 2025</h2>
     <div class="center-image">
@@ -313,30 +325,6 @@
   <div class="footer">
     <p>Con amore, Paola & Edoardo</p>
     <br>
-<iframe
-  id="yt-audio"
-  src="https://www.youtube.com/embed/2H5rusicEnc?enablejsapi=1&loop=1&playlist=2H5rusicEnc&controls=0&modestbranding=1&mute=1"
-  style="width:0;height:0;display:none;"
-  frameborder="0"
-  allow="autoplay"
-></iframe>
-
-<script>
-  window.onYouTubeIframeAPIReady = function () {
-    const player = new YT.Player("yt-audio", {
-      events: {
-        onReady: function (event) {
-          event.target.playVideo();
-        }
-      }
-    });
-  };
-
-  // Carica l'API di YouTube asincrona
-  const tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-  document.body.appendChild(tag);
-</script><br>
 <p style="font-size: 0.4em; color: #888; margin-top: 1rem; font-family: 'Montserrat', sans-serif;">
   created by <span style="font-style: normal;">Alice Golfari</span>
 </p>
