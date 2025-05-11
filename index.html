@@ -235,13 +235,17 @@
 </audio>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const audio = document.getElementById("background-music");
-    document.body.addEventListener("click", () => {
+  const audio = document.getElementById("background-music");
+  let started = false;
+
+  window.addEventListener("scroll", function () {
+    if (!started) {
       audio.play().catch(() => {});
-    }, { once: true });
+      started = true;
+    }
   });
 </script>
+  
   <section class="countdown">
     <h2>Ci sposiamo il<br>27 Settembre 2025</h2>
     <div class="center-image">
